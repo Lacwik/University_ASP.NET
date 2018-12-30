@@ -1,0 +1,24 @@
+<form>
+    <div class="input-group">
+      <span class="input-group-addon" routerLink="/home"><i class="fa fa-home"></i></span>
+      <span class="input-group-addon" routerLink="/owners"><i class="fa fa-group"></i></span>
+      <span class="input-group-addon" routerLink="/cars"><i class="fa fa-automobile"></i></span>
+      <span class="input-group-addon" routerLink="/config"><i class="fa fa-gear"></i></span>
+    </div>
+  </form>
+  
+<div class="container">
+
+  <nb-card class="nav-card">
+    <nb-card-header class="nav-card-header">Classic Garage navigation menu</nb-card-header>
+    <nb-card-body>
+        <nb-list class="menu-list">
+          <nb-list-item *ngFor="let page of pages" >
+              <button nbButton shape="semi-round" outline status="info" class="btn-home" routerLink="/{{page}}">{{page}}</button>
+          </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+    <nb-card-footer style="text-align: right;">&#169; Maciej Łacwik 2018</nb-card-footer>
+  </nb-card>
+
+</div>

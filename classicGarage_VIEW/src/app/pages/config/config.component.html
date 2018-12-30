@@ -1,0 +1,41 @@
+<form>
+  <div class="input-group">
+    <span class="input-group-addon" routerLink="/home"><i class="fa fa-home"></i></span>
+    <span class="input-group-addon" routerLink="/owners"><i class="fa fa-group"></i></span>
+    <span class="input-group-addon" routerLink="/cars"><i class="fa fa-automobile"></i></span>
+    <span class="input-group-addon" routerLink="/config"><i class="fa fa-gear"></i></span>
+  </div>
+</form>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+
+<div class="container">
+
+    <nb-card class="users-card">
+      <nb-card-header>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">Action</button>
+              <button class="dropdown-item" type="button">Another action</button>
+              <button class="dropdown-item" type="button">Something else here</button>
+            </div>
+          </div>
+      </nb-card-header>
+      <nb-card-body>
+          elo<input type="text" nbInput fullWidth shape="round" placeholder="Firstname"><br/>
+          elo<input type="text" nbInput fullWidth shape="round" placeholder="Lastname"><br/>
+      </nb-card-body>
+      <nb-card-footer>edit buttons</nb-card-footer>
+    </nb-card>
+
+</div>

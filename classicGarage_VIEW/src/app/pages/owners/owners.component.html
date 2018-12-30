@@ -1,0 +1,89 @@
+<form>
+    <div class="input-group">
+        <span class="input-group-addon" routerLink="/home"><i class="fa fa-home"></i></span>
+        <span class="input-group-addon" routerLink="/owners"><i class="fa fa-group"></i></span>
+        <span class="input-group-addon" routerLink="/cars"><i class="fa fa-automobile"></i></span>
+        <span class="input-group-addon" routerLink="/config"><i class="fa fa-gear"></i></span>
+    </div>
+</form>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+        <div class="container">
+
+                <div class="grid-item-1">
+                      <nb-card class="nav-card" style="width: 50% !important;">
+                          <nb-card-body>
+                              
+                              <div>
+                                  <nb-user 
+                                      size="xlarge" 
+                                      name="{{current_owner.firstname}} {{current_owner.lastname}}" 
+                                      title="{{current_owner.phone}}">
+                                  </nb-user>  
+                              </div>
+              
+                              <div style="margin-top: 4%; width: 80%; margin-left: 10%;">
+                              <nb-reveal-card >
+                                  <nb-card-front>
+                                      <nb-card>
+                                      <nb-card-header style="text-align: right; margin-right: 10%">Offers</nb-card-header>
+                                      <nb-card-body>
+                                              <nb-list class="menu-list-cars">
+                                                  <nb-list-item *ngFor="let car of current_owner_cars" (click)="onSelectCar(car)" >
+                                                      {{car.brand}} {{car.model}}
+                                                  </nb-list-item>
+                                              </nb-list>
+                                      </nb-card-body>
+                                      </nb-card>
+                                  </nb-card-front>
+                                  <nb-card-back>
+                                      <nb-card>
+                                      <nb-card-body>
+                                          <br/>
+                                          Brand: {{current_car.brand}}
+                                          <br/>
+                                          Model: {{current_car.model}}
+                                          <br/>
+                                          Year: {{current_car.year}}
+                                          <br/>
+                                          Price: {{current_car.sell_price}}
+                                      </nb-card-body>
+                                      </nb-card>
+                                  </nb-card-back>
+                              </nb-reveal-card>
+                              </div>
+              
+                          </nb-card-body>
+                      </nb-card>
+                </div>
+                <div class="grid-item-2">
+                  <nb-card class="nav-card">
+                      <nb-card-body>
+                          <nb-list class="menu-list">
+                              <nb-list-item *ngFor="let owner of owners" (click)="onSelectOwner(owner)" >
+                                  <!-- <span (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" [style.background-color]="mSpanColor"></span>
+                                      <button type="button" class="btn btn-default">{{owner.firstname}} {{owner.lastname}}</button>
+                                  </span> -->
+                                  <button type="button" class="btn btn-default btn-own">{{owner.firstname}} {{owner.lastname}}</button>
+                              </nb-list-item>
+                          </nb-list>
+                      </nb-card-body>
+                  </nb-card>
+                </div>
+                
+              </div>
+
+</body>
+</html>

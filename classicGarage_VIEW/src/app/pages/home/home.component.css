@@ -1,0 +1,34 @@
+.container {
+    background-image: url("../../../assets/images/home/home_back.jpg") !important;
+    background-color: #000000;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-card {
+    width: 35% !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: wheat !important;
+    margin-left: 2%;
+    height: 100%;
+}
+
+.nav-card-header {
+    color: wheat !important;
+    text-align: center !important;
+}
+
+.btn-home {
+    text-align: center;
+    color: whitesmoke !important;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.menu-list {
+    margin-top: 30%;
+    text-align: center;
+
+}
