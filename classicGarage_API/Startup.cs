@@ -4,12 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using classicGarage_API.Models;
+using System.Web.Http.Cors;
+using System.Web.Http;
 
 namespace classicGarage_API
 {
@@ -26,6 +30,8 @@ namespace classicGarage_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var connection = @"Server=tcp:maciejlacwik.database.windows.net,1433;Initial Catalog=garageLepa;Persist Security Info=False;User ID=maciejlacwik;Password=Xcsxdzxc1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            services.AddDbContext<ClassicGarageContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
