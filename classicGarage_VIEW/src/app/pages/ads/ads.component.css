@@ -1,0 +1,13 @@
+.container {
+    background-image: url("../../../assets/images/admin_options/gears.png") !important;
+    background-color: #212121;
+    width: 100%;
+    height: 670px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-group{
+    width: 100%;
+}

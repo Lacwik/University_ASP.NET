@@ -1,0 +1,52 @@
+.container {
+    background-image: url("../../../assets/images/home/home_back.jpg") !important;
+    background-color: #000000;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.menu-list-cars {
+    text-align: center;
+    max-height: 90%;
+}
+
+.person {
+    border: 10px solid transparent;
+    width: 40%;
+    height: 80%;
+    opacity: 0.8;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+
+  .scrollable-container-elo{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+  }
+
+  .input-group{
+      width: 100%;
+  }
+
+  .infos{
+    margin-left: 10%;
+    width: 30% !important;
+    max-width: 30%;
+    border: outset !important;
+  }
+
+.alt-text{
+  text-align: center;
+}
+
+.repair-item{
+  background: #ffffff;
+}
+  .repair-item:hover{
+    background: #f1f1f1;
+  }
