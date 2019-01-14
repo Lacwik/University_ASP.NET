@@ -14,5 +14,6 @@ namespace classicGarage_API.Models
         public DbSet<Part> Parts { get; set; }
         public DbSet<Repair> Repairs { get; set; }
         public DbSet<Ad> Ads { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
