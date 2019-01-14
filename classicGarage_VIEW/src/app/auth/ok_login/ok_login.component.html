@@ -1,0 +1,13 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+<p>Contratulations for successfull login! Welcome to ClassigGarage project by Maciej Łacwik</p>
+<p>This site is build with Angular 6 and Webpack 4.8, using ASP.NET Core 2.1 API</p>
+<p>IMPORTANT: environment needs to be Cors-Free cause API is hosted at different localhost than frontend</p>
+<h2><a [routerLink]="['/home']">GO FOR IT!</a></h2>
+<h5>All registered users:</h5>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>

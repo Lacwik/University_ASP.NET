@@ -6,36 +6,23 @@ import { OwnersComponent } from './pages/owners/owners.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { AdsComponent } from './pages/ads/ads.component';
 import { ConfigComponent } from './pages/config/config.component';
-import {
-  NbAuthComponent,
-  NbLoginComponent,
-  NbRegisterComponent,
-  NbLogoutComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent,
-} from '@nebular/auth';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './auth/_guards/auth.huard';
+import { Ok_loginCOmponent } from './auth/ok_login/ok_login.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'page-not-found', component: PageNotFoundComponent },
-    { path: 'owners', component: OwnersComponent },
-    { path: 'cars', component: CarsComponent },
-    { path: 'ads', component: AdsComponent },
-    { path: 'config', component: ConfigComponent },
+    { path: 'owners', component: OwnersComponent, canActivate: [AuthGuard] },
+    { path: 'cars', component: CarsComponent, canActivate: [AuthGuard] },
+    { path: 'ads', component: AdsComponent, canActivate: [AuthGuard] },
+    { path: 'config', component: ConfigComponent, canActivate: [AuthGuard] },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: '', component: Ok_loginCOmponent, canActivate: [AuthGuard] },
     { path: '**', component: PageNotFoundComponent },
-    {
-      path: 'auth',
-      component: NbAuthComponent,
-      children: [
-        { path: '', component: NbLoginComponent, },
-        { path: 'login', component: NbLoginComponent, },
-        { path: 'register', component: NbRegisterComponent, },
-        { path: 'logout', component: NbLogoutComponent, },
-        { path: 'request-password', component: NbRequestPasswordComponent, },
-        { path: 'reset-password', component: NbResetPasswordComponent, },
-      ],
-    },
-  
+
   ];
   
   
